@@ -1,0 +1,79 @@
+/* General Layout */
+.admin-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loading-text,
+.no-orders-text {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Table Styling */
+.order-table {
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.order-table th,
+.order-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #555;
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.order-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Highlight Paid and Unpaid Rows */
+.paid-row {
+  background-color: #d4edda;
+}
+
+.unpaid-row {
+  background-color: #f8d7da;
+}
+
+/* Cart Items Table */
+.cart-items-table table {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 14px;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.cart-items-table th,
+.cart-items-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.empty-cart-text {
+  font-size: 14px;
+  color: #777;
+}

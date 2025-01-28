@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  margin-top: 0px;
+  
+}
+
+
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align all options */
+}
+
+.option {
+  background-color: #3c3f47; /* Darker box color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  margin: 10px;
+  width: 300px; /* Fixed width for each option */
+  transition: transform 0.2s; /* Smooth scaling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.option:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.icon {
+  font-size: 40px; /* Icon size */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+h2 {
+  margin: 0; /* Remove default margin */
+}
+
+p {
+  margin: 5px 0 0; /* Space for the description */
+}
+
+.App-header {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: block; /* Change from flex to block */
+  padding-top: 20px; /* Add space from the top of the page */
+  text-align: center; /* Centers the image horizontally */
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
