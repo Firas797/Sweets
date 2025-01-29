@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4df886f4.css",
+    "main.js": "/static/js/main.f3b00d64.js",
+    "static/media/Sal.png": "/static/media/Sal.d19c6268968d654819c2.png",
+    "static/media/backgroudHeader.webp": "/static/media/backgroudHeader.198bf431044de8fcecec.webp",
+    "static/media/ca.PNG": "/static/media/ca.d94cc6bf933c2aca4ae7.PNG",
+    "static/media/BG1.jpg": "/static/media/BG1.3ce755f29bb1889a335e.jpg",
+    "static/media/G5.jpg": "/static/media/G5.7786cf8b1000032c3e69.jpg",
+    "static/media/G3.jpg": "/static/media/G3.f004a28db927ff3f0190.jpg",
+    "static/media/MAKROUDH.webp": "/static/media/MAKROUDH.bbb658b76fa51c0931ef.webp",
+    "static/media/KAAKWARKA.jpg": "/static/media/KAAKWARKA.84ab0c334e22cedb7c74.jpg",
+    "static/media/logo.png": "/static/media/logo.e9e50a37282488d44fb2.png",
+    "static/media/14.jpg": "/static/media/14.f37f425eb6380b44f27b.jpg",
+    "static/media/G1.jpg": "/static/media/G1.abd31900e775081598ec.jpg",
+    "static/media/11.jpg": "/static/media/11.515d9e06a0230538e232.jpg",
+    "static/media/5.jpg": "/static/media/5.38ed2defeb7fb5eca1ff.jpg",
+    "static/media/12.jpg": "/static/media/12.8220035199e240c13bcc.jpg",
+    "static/media/2.jpg": "/static/media/2.c2c6ffd8695215da8bfb.jpg",
+    "static/media/9.jpg": "/static/media/9.a67db85d51fe473d5f08.jpg",
+    "static/media/7.jpg": "/static/media/7.b102d6e3971185640b11.jpg",
+    "static/media/1.jpg": "/static/media/1.74eccdd6864244e5b7cf.jpg",
+    "static/media/sc2.png": "/static/media/sc2.24bcf88dc76d597dba18.png",
+    "static/media/3.jpg": "/static/media/3.24322b480d889645da70.jpg",
+    "static/media/G2.jpg": "/static/media/G2.54ba6c9907956c9a436e.jpg",
+    "static/media/13.jpg": "/static/media/13.8ccbd58ac6bdbbfad53a.jpg",
+    "static/media/4.jpg": "/static/media/4.b17dc2a0759d30fad491.jpg",
+    "static/media/10.jpg": "/static/media/10.f85a810f4e029ce5d216.jpg",
+    "static/media/Sc.png": "/static/media/Sc.9c088c239a901c350b82.png",
+    "index.html": "/index.html",
+    "main.4df886f4.css.map": "/static/css/main.4df886f4.css.map",
+    "main.f3b00d64.js.map": "/static/js/main.f3b00d64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4df886f4.css",
+    "static/js/main.f3b00d64.js"
+  ]
+}
