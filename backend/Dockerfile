@@ -1,18 +1,21 @@
-# Use Node.js image
-FROM node:18-alpine
+# pull official base image
+FROM node:20
 
-# Set working directory
+# set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
-COPY package.json package-lock.json ./
-RUN npm install --production
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Copy the rest of the backend files
-COPY . .
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent && npm cache clean --force
 
-# Expose port (e.g., 5000)
+# add app
+COPY . ./
+
+# start app
+
 EXPOSE 5000
-
-# Run the server
-CMD ["node", "server.js"]
+CMD [ "node" , "server.js" ]
