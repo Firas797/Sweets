@@ -1,21 +1,21 @@
-# pull official base image
+# Use Node.js image
 FROM node:20
 
-# set working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# Copy package.json and package-lock.json FIRST to take advantage of Docker caching
+COPY ./package.json ./ 
+COPY ./package-lock.json ./
 
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
+# Install dependencies
 RUN npm install --silent && npm cache clean --force
 
-# add app
-COPY . ./
+# Copy the rest of the application files
+COPY . .
 
-# start app
-
+# Expose the application port
 EXPOSE 5000
-CMD [ "node" , "server.js" ]
+
+# Start the server
+CMD ["node", "server.js"]
