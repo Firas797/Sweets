@@ -3,7 +3,7 @@ import './Gateaux.css'
 import Navbar from '../Navbar/Navbar'
 import Bodys from './Bodys'
 import { useSelector, useDispatch } from "react-redux";
-import createGateauxOrder from '../../Redux/Order/GateauxOrder'
+import { createGateauxOrder } from '../../Redux/Order/GateauxOrder';
 
 function Gateaux() {
 

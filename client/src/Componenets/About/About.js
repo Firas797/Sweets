@@ -126,7 +126,7 @@ const About = () => {
       {/* Success Popup */}
       {successPopupVisible && (
         <div className="success-popup">
-          <p>We will call you soon to confirm! Thank you ❤️</p>
+          <p>Votre commande a été envoyée correctement ! Merci ❤️</p>
         </div>
       )}
 

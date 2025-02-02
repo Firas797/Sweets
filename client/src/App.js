@@ -1,6 +1,7 @@
 import './App.css';
 import About from './Componenets/About/About';
 import Admin from './Componenets/Admin/Admin';
+import GateauxOrders from './Componenets/Admin/GateauxOrders';
 import Category from './Componenets/Category/Category';
 import Gateaux from './Componenets/Gateaux/Gateaux';
 import Panier from './Componenets/Panier/Panier';
@@ -24,6 +25,8 @@ function App() {
           <Route path="/Sweets" element={<Sweets />} />
           <Route path="/Panier" element={<Panier />} />
           <Route path="/Admin" element={<Admin />} />
+          <Route path="/GtxOrder" element={<GateauxOrders />} />
+
 
 
 
