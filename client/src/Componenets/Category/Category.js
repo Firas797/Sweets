@@ -41,7 +41,7 @@ const Category = () => {
 
   return (
     <div className="product-grid">
-      <h1 className="header-title">Nous Categories</h1>
+      <h1 className="header-title">Nos Categories</h1>
 
       <div className="grid-container">
         {products.map((product) => (

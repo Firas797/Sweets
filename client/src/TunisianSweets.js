@@ -108,7 +108,7 @@ const TunisianSweets = () => {
                 <img src={item.image} alt={item.name} className="sweet-image" />
                 <h3 className="sweet-name">{item.name}</h3>
                 <p className="sweet-description">{item.description}</p>
-                <p className="sweet-price">{item.price}</p>
+                <p className="sweet-name">{item.price}</p>
                 <button
                   className="buy-now"
                   onClick={() => handleAcheterClick(item)}
@@ -135,7 +135,7 @@ const TunisianSweets = () => {
                   <img src={item.image} alt={item.name} className="sweet-image" />
                   <h3 className="sweet-name">{item.name}</h3>
                   <p className="sweet-description">{item.description}</p>
-                  <p className="sweet-price">{item.price}</p>
+                  <p className="sweet-name">{item.price}</p>
                   <button
                     className="buy-now"
                     onClick={() => handleAcheterClick(item)}
@@ -161,7 +161,7 @@ const TunisianSweets = () => {
         </div>
         {/* Footer Section */}
         <footer className="footer">
-          <p>&copy; 2024 Tunisian Sweets. All Rights Reserved.</p>
+          <p>&copy; 2025 Tunisian Sweets. @Med Firas Bechedli.</p>
           <div className="social-links">
             <a href="#facebook">Facebook</a>
             <a href="#instagram">Instagram</a>

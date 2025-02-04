@@ -36,9 +36,9 @@ function Gateaux() {
     <div>
 <div>
   <div className="hero_area">
-    {/* header section strats */}
+    {/* header section strats */}   <Navbar/>
     <header className="header_section long_section px-0">
-   <Navbar/>
+
     </header>
     <section className="about_section layout_padding long_section">
     <div className="container">

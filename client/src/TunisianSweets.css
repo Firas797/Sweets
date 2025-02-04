@@ -264,7 +264,6 @@ body {
 }
 
 .sweet-card:hover {
-  transform: scale(1.05);
 }
 
 .sweet-image {
@@ -272,6 +271,7 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+  padding-right: 20px;
 }
 
 .sweet-name {

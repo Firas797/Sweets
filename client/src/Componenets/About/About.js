@@ -5,10 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Don't forget to import Bootstr
 import "./About.css";
 import { useDispatch } from 'react-redux';  // Import useDispatch from redux
 import { createGateauxOrder } from '../../Redux/Order/GateauxOrder';
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const dispatch = useDispatch();  // Initialize dispatch
+  const navigate = useNavigate();
 
+  const handleNavigation = (category) => {
+    navigate(`/${category}`);
+  };
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -48,8 +53,7 @@ const About = () => {
         <div className="intro-text">
           <h1>Hello!!!<br />Birthday !!!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+          Faites de chaque moment une fête ! 🎉 Commandez votre délicieux gâteau d'anniversaire ou de surprise dès aujourd'hui ! 🎂✨
           </p>
           <button className="cta-button" onClick={() => setIsOpen(true)}>
             SEND MESSAGE
@@ -132,12 +136,13 @@ const About = () => {
 
       {/* Portfolio Showcase */}
       <section className="portfolio">
-        <h2>WORK SHOWCASE.</h2>
+        <h2> DÉLICIEUX SWEETS TUNISIENS.</h2>
         <div className="portfolio-filters">
-          <button className="filter active">All</button>
-          <button className="filter">Branding</button>
-          <button className="filter">Illustration</button>
-          <button className="filter">Web</button>
+          <button className="filter active">Tous</button>
+          <button className="filter" onClick={() => handleNavigation("Sweets")}>Sucré</button>
+      <button className="filter" onClick={() => handleNavigation("Salé")}>Salé</button>
+      <button className="filter" onClick={() => handleNavigation("Gateaux")}>Gateaux</button>
+   
         </div>
         <div className="portfolio-grid">
           {portfolioItems.map((item) => (
@@ -150,7 +155,7 @@ const About = () => {
             </div>
           ))}
         </div>
-        <button className="load-more">SHOW ME MORE</button>
+        <button className="load-more">Voir Plus</button>
       </section>
     </div>
   );

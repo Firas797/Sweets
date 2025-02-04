@@ -93,7 +93,7 @@ function Sweets() {
                   className="buy-now"
                   onClick={() => handleAcheterClick(item)}
                 >
-                  Buy Now
+                  Acheter
                 </button>
               </div>
             ))}
