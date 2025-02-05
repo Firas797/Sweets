@@ -56,8 +56,7 @@ const About = () => {
           Faites de chaque moment une fête ! 🎉 Commandez votre délicieux gâteau d'anniversaire ou de surprise dès aujourd'hui ! 🎂✨
           </p>
           <button className="cta-button" onClick={() => setIsOpen(true)}>
-            SEND MESSAGE
-          </button>
+          ENVOYER UN MESSAGE          </button>
         </div>
         <div className="intro-image">
           <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/9e456be5-c701-45d8-b8bd-856ef7c5a7e8/Derivates/db88f78a-89d4-4507-ac81-8531e1da2c3f.jpg" alt="Creative Agency" />
@@ -74,22 +73,26 @@ const About = () => {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              name="name"
-              placeholder="Name"
+              name="Nom"
+              placeholder="Nom"
               value={formData.name}
               onChange={handleInputChange}
               required
             />
             <hr />
+            <br/>
+
             <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
+              type="Tel"
+              name="Tel"
+              placeholder="Tel"
               value={formData.phone}
               onChange={handleInputChange}
               required
             />
             <hr />
+            <br/>
+
             <input
               type="message"
               name="message"
@@ -99,30 +102,36 @@ const About = () => {
               required
             />
             <hr />
+            <br/>
+
             <input
               type="text"
-              name="location"
-              placeholder="Location"
+              name="Localisation"
+              placeholder="Localisation"
               value={formData.location}
               onChange={handleInputChange}
               required
             />
             <hr />
+            <br/>
             <input
               type="number"
-              name="numberOfPeople"
-              placeholder="Number of People"
+              name="Nombre de personnes"
+              placeholder="Nombre de personnes"
               value={formData.numberOfPeople}
               onChange={handleInputChange}
               required
             />
             <hr />
+            <br/>
+
             <p className="arabic1">
               برجاء ارسال التفاصيل الخاصة بك وسوف <span className="call"> نتصل بك</span>
             </p>
+            <br/>
+
 
             <Button type="submit" variant="primary">Envoyer</Button>
-            <Button variant="secondary" onClick={() => setIsOpen(false)}>Close</Button>
           </form>
         </Modal.Body>
       </Modal>
