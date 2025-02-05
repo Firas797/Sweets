@@ -161,12 +161,8 @@ const TunisianSweets = () => {
         </div>
         {/* Footer Section */}
         <footer className="footer">
-          <p>&copy; 2025 Tunisian Sweets. @Med Firas Bechedli.</p>
-          <div className="social-links">
-            <a href="#facebook">Facebook</a>
-            <a href="#instagram">Instagram</a>
-            <a href="#twitter">Twitter</a>
-          </div>
+          <p>&copy; 2025 Jury. @Med Firas Bechedli.</p>
+        
         </footer>
       </div>
       {/* Sticky Cart Icon */}

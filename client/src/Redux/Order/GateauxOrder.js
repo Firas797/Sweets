@@ -26,7 +26,7 @@ export const fetchGtxOrder = createAsyncThunk(
   'order/fetchGtxOrder',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('http://localhost:5000/api/GateauOrder/get-gateaux-orders');
+      const response = await axios.get('http://51.178.139.198/:5000/api/GateauOrder/get-gateaux-orders');
       return response.data; // Return the list of orders
     } catch (error) {
       const errorMsg = error.response?.data?.message || 'Something went wrong while fetching the orders!';
