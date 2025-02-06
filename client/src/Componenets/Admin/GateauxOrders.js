@@ -16,7 +16,7 @@ function GateauxOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://51.178.139.198:5000/api/GateauOrder/get-gateaux-orders');
+        const response = await axios.get('https://juryapp-backend.enalle.easypanel.host/api/GateauOrder/get-gateaux-orders');
         setOrders(response.data); // Set the fetched orders into state
         setLoading(false); // Set loading to false when data is fetched
       } catch (error) {
