@@ -73,7 +73,7 @@ const About = () => {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              name="Nom"
+              name="name"
               placeholder="Nom"
               value={formData.name}
               onChange={handleInputChange}
@@ -84,7 +84,7 @@ const About = () => {
 
             <input
               type="Tel"
-              name="Tel"
+              name="phone"
               placeholder="Tel"
               value={formData.phone}
               onChange={handleInputChange}
@@ -106,7 +106,7 @@ const About = () => {
 
             <input
               type="text"
-              name="Localisation"
+              name="location"
               placeholder="Localisation"
               value={formData.location}
               onChange={handleInputChange}

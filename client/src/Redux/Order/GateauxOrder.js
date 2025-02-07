@@ -8,7 +8,7 @@ export const createGateauxOrder = createAsyncThunk(
   'order/createGateauxOrder',
   async (gateauxData, thunkAPI) => {
     try {
-      const response = await axios.post('https://juryapp-backend.enalle.easypanel.host/api/GateauOrder/create-gateaux-order', gateauxData);
+      const response = await axios.post('http://localhost:5000/api/GateauOrder/create-gateaux-order', gateauxData);
   
       return response.data; // Return the newly created order
     } catch (error) {
@@ -26,7 +26,7 @@ export const fetchGtxOrder = createAsyncThunk(
   'order/fetchGtxOrder',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('https://juryapp-backend.enalle.easypanel.host/api/GateauOrder/get-gateaux-orders');
+      const response = await axios.get('http://localhost:5000/api/GateauOrder/get-gateaux-orders');
       return response.data; // Return the list of orders
     } catch (error) {
       const errorMsg = error.response?.data?.message || 'Something went wrong while fetching the orders!';

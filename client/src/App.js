@@ -27,10 +27,6 @@ function App() {
           <Route path="/Admin" element={<Admin />} />
           <Route path="/GtxOrder" element={<GateauxOrders />} />
 
-
-
-
-
         </Routes>
       </Router>
   
