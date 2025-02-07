@@ -125,7 +125,7 @@ function Panier() {
                         <br />
                         <span className="text-muted">Nom': </span>{item.name2}
                         <br />
-                        <span className="text-muted">Prix: </span>{item.price} DT
+                        <span className="text-muted">Prix: </span>{item.price} 
                         <br />
                       </p>
                     </div>
