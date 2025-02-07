@@ -7,7 +7,7 @@ export const createOrder = createAsyncThunk(
   'order/createOrder',
   async (orderData, thunkAPI) => {
     try {
-      await axios.post('http://localhost:5000/api/orders/create-order', orderData);
+      await axios.post('https://juryapp-backend.enalle.easypanel.host/api/orders/create-order', orderData);
       toast.success('Order created successfully!', {
         position: toast.POSITION.BOTTOM_CENTER,
       });
@@ -21,7 +21,7 @@ export const createOrder = createAsyncThunk(
 // Async thunk for fetching orders
 export const fetchOrders = createAsyncThunk('order/fetchOrders', async () => {
   try {
-    const response = await axios.get('http://localhost:5000/api/orders/get-orders'); // Change the API endpoint accordingly
+    const response = await axios.get('https://juryapp-backend.enalle.easypanel.host/api/orders/get-orders'); // Change the API endpoint accordingly
     return response.data;
   } catch (error) {
     throw new Error('An error occurred while fetching orders.');
