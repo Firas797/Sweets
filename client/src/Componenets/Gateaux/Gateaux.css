@@ -11499,6 +11499,8 @@ a:focus {
 
 .slider_section .img-box img {
   width: 100%;
+  height: 150px;
+
 }
 
 .slider_section .carousel-indicators {
@@ -11645,6 +11647,7 @@ a:focus {
 
 .blog_section .box .img-box img {
   width: 100%;
+  height: 400px;
 }
 
 .blog_section .box .detail-box {

@@ -76,7 +76,7 @@ function Gateaux() {
     </div>
   </section>
   <br/>
-    <section className="client_section layout_padding-bottom">
+    {/* <section className="client_section layout_padding-bottom">
     <div className="container">
       <div className="heading_container">
         <h1 className="header-title" >
@@ -160,6 +160,7 @@ function Gateaux() {
             </div>
           </div>
         </div>
+        
         <div className="carousel_btn-container">
           <a className="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
             <i className="fa fa-long-arrow-left" aria-hidden="true" />
@@ -172,8 +173,81 @@ function Gateaux() {
         </div>
       </div>
     </div>
+  </section> */}
+  <section className="blog_section layout_padding">
+    <div className="container">
+    <div className="heading_container">
+        <h1 className="header-title" >
+          Tendence
+        
+        </h1 >
+      </div>
+      <div className="row">
+        <div className="col-md-6 col-lg-4 mx-auto">
+          <div className="box">
+            <div className="img-box">
+              <img src="images/b1.jpg" alt />
+            </div>
+            <div className="detail-box">
+              <h5>
+              Gâteaux Sur-Mesure pour Tous Vos Événements 🎂✨              </h5>
+              <p>
+              Que ce soit pour un anniversaire, une surprise ou une occasion spéciale, nos gâteaux sont disponibles en plusieurs tailles et saveurs pour s’adapter à vos envies.               </p>
+             <br/>
+             <button 
+      className="buy-now" 
+      onClick={handleCommandeClick}
+    >
+      Commander 
+    </button>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-4 mx-auto">
+          <div className="box">
+            <div className="img-box">
+              <img src="images/b2.jpg" alt />
+            </div>
+            <div className="detail-box">
+              <h5>
+              Best-Seller : Brownies Gâteau  🍫✨              </h5>
+              <p>
+              Découvrez notre nouvelle tendance gourmande : le Brownies Gâteau , créé par nos clients et devenu rapidement un incontournable ! Une texture fondante, un goût intense… Essayez-le et succombez à son plaisir unique. 😍🍰              </p>
+              <br/>
+              <button 
+      className="buy-now" 
+      onClick={handleCommandeClick}
+    >
+      Commander 
+    </button>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6 col-lg-4 mx-auto">
+          <div className="box">
+            <div className="img-box">
+              <img src="images/b3.jpg" alt />
+            </div>
+            <div className="detail-box">
+              <h5>
+              Gâteau d'Anniversaire 🎉🎂
+</h5>              <br/>
+
+              <p>
+              Nous réalisons des gâteaux d'anniversaire sur mesure pour tous les âges, des enfants aux adultes ! Des créations uniques et gourmandes pour rendre chaque fête encore plus spéciale. 🎈✨              </p>
+              <br/>
+              <button 
+      className="buy-now" 
+      onClick={handleCommandeClick}
+    >
+      Commander 
+    </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  
   </div>
   {/* furniture section */}
   <section className="furniture_section layout_padding">
@@ -188,71 +262,7 @@ function Gateaux() {
 
   {/* end about section */}
   {/* blog section */}
-  <section className="blog_section layout_padding">
-    <div className="container">
-      <div className="heading_container">
-        <h2>
-          Latest Blog
-        </h2>
-      </div>
-      <div className="row">
-        <div className="col-md-6 col-lg-4 mx-auto">
-          <div className="box">
-            <div className="img-box">
-              <img src="images/b1.jpg" alt />
-            </div>
-            <div className="detail-box">
-              <h5>
-                Look even slightly believable. If you are
-              </h5>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </p>
-              <a href>
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mx-auto">
-          <div className="box">
-            <div className="img-box">
-              <img src="images/b2.jpg" alt />
-            </div>
-            <div className="detail-box">
-              <h5>
-                Anything embarrassing hidden in the middle
-              </h5>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </p>
-              <a href>
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mx-auto">
-          <div className="box">
-            <div className="img-box">
-              <img src="images/b3.jpg" alt />
-            </div>
-            <div className="detail-box">
-              <h5>
-                Molestias magni natus dolores odio commodi. Quaerat!
-              </h5>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </p>
-              <a href>
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
   {/* end blog section */}
   {/* client section */}
 
