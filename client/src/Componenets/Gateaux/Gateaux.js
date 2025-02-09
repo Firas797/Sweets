@@ -178,7 +178,7 @@ function Gateaux() {
     <div className="container">
     <div className="heading_container">
         <h1 className="header-title" >
-          Tendence
+          Besty
         
         </h1 >
       </div>
