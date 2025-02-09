@@ -57,7 +57,11 @@ function Salé() {
     <div className="sweets-grid">
         {SaléJson.map((item, index) => (
           <div key={index} className="sweet-card">
-            <img src="img/antique-cafe-bg-02.jpg" alt={item.name} className="sweet-image" />
+            <img
+                  src={item.image || 'img/antique-cafe-bg-02.jpg'}
+                  alt={item.name}
+                  className="sweet-image"
+                />
             <h3 className="sweet-name">{item.name}</h3>
             <p className="sweet-name">{item.name2}</p>
             <p className="sweet-name">{item.price} dt</p>
@@ -72,7 +76,7 @@ function Salé() {
       </div>
     </div>        
   </div>
-  <div id="about" className="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
+  {/* <div id="about" className="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
     <div className="container mx-auto tm-container py-24 sm:py-48">
       <div className="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
         <div className="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
@@ -129,7 +133,7 @@ function Salé() {
         </div>                
       </footer>
     </div>        
-  </div>    
+  </div>     */}
       <div className="cart-container"  onClick={() => navigate('/Panier')}>
                
                <img src={Sc} alt="Shopping Cart" />

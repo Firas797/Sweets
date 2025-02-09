@@ -6,10 +6,10 @@ import Makroudh from './Products Pictures/MAKROUDH.webp';
 import Baklawa from './Products Pictures/BAKLAWA.jpg';
 import KAAKWARKA from './Products Pictures/KAAKWARKA.jpg';
 import YOYO from './Products Pictures/YOYO.jpg';
-import G1 from './Products Pictures/Gateaux/G1.jpg';
+import G1 from './Products Pictures/Gateaux/G1.jpeg';
 import G2 from './Products Pictures/Gateaux/G2.jpg';
 import G3 from './Products Pictures/Gateaux/G3.jpg';
-import G5 from './Products Pictures/Gateaux/G5.jpg';
+import G5 from './Products Pictures/Gateaux/G4.jpg';
 import './App.css';
 import Navbar from './Componenets/Navbar/Navbar';
 import Category from './Componenets/Category/Category';
@@ -39,16 +39,16 @@ const TunisianSweets = () => {
   const navigate = useNavigate(); // Define the navigate function
 
   const sweets = [
-    { name: 'Baklawa', description: 'Layers of pastry with nuts and syrup.', price: '15 DT', image: Baklawa },
+    { name: 'Baklawa', description: ' Baklawa tunisienne.', price: '15 DT', image: Baklawa },
     { name: 'Makroud', description: 'Semolina pastry filled with dates.', price: '10 DT', image: Makroudh },
     { name: 'Kaak Warka', description: 'Almond-filled pastry flavored with rosewater.', price: '12 DT', image: KAAKWARKA },
     { name: 'Yoyo', description: 'Deep-fried pastry with honey.', price: '8 DT', image: YOYO },
   ];
   const Gateaux = [
-    { name: 'G1', description: 'Layers of pastry with nuts and syrup.', price: '15 DT', image: G1 },
-    { name: 'G2', description: 'Semolina pastry filled with dates.', price: '10 DT', image: G2 },
+    { name: 'Chocolat', description: 'Gâteaux ganach chocolat', price: '15 DT', image: G1 },
+    { name: 'Russe', description: 'Gâteaux russe pistache', price: '10 DT', image: G2 },
     { name: 'G3', description: 'Almond-filled pastry flavored with rosewater.', price: '12 DT', image: G3 },
-    { name: 'G4', description: 'Deep-fried pastry with honey.', price: '8 DT', image: G5 },
+    { name: 'Anniversaire', description: 'Gâteaux anniversaire', price: '8 DT', image: G5 },
   ];
 
   const handleBuyNow = () => {
@@ -68,35 +68,7 @@ const TunisianSweets = () => {
 
         </div>
         <br />
-        {/* <div className="features-section">
-          <div className="feature">
-            <div className="icon">
-              <FaShippingFast />
-            </div>
-            <div className="text">
-              <h3>Livraison Express </h3>
-              <p>Ou retrait en magasin le plus proche</p>
-            </div>
-          </div>
-          <div className="feature">
-            <div className="icon">
-              <MdAddIcCall />
-            </div>
-            <div className="text">
-              <h3>Service Client</h3>
-              <p>Toujours à l'écoute</p>
-            </div>
-          </div>
-          <div className="feature">
-            <div className="icon">
-              <PiGlobeStandFill />
-            </div>
-            <div className="text">
-              <h3>Meilleure qualité</h3>
-              <p>Paiement à la livraison</p>
-            </div>
-          </div>
-        </div> */}
+    
         <hr />
         <Category />
         <br />
