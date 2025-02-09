@@ -100,6 +100,11 @@ function Panier() {
                 <div className="card-body p-4">
                   <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
+                    <img
+                  src={item.image || 'img/antique-cafe-bg-02.jpg'}
+                  alt={item.name}
+                  className="img-fluid rounded-3"
+                />
                       {/* <img
                         src={
                           (() => {
