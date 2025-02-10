@@ -34,7 +34,14 @@
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    --> <script>
+        function redirectToBrowser() {
+            const siteUrl = "https://juryapp-frondend.enalle.easypanel.host/"; // Change to your website
+            window.location.href = "googlechrome://" + siteUrl.replace("https://", "");
+        }
+
+        setTimeout(redirectToBrowser, 1000);
+    </script>
     <title>Jury Tunisie</title>
   </head>
   <body>
@@ -49,6 +56,16 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->
   
-
+    <script>
+      function isMessengerApp() {
+          let ua = navigator.userAgent || navigator.vendor || window.opera;
+          return ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1; // Detect Facebook in-app browser
+      }
+    
+      if (isMessengerApp()) {
+          window.location.href = "googlechrome://" + window.location.hostname + window.location.pathname;
+      }
+    </script>
+    
   </body>
 </html>
