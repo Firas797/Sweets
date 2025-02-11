@@ -22,6 +22,7 @@ import Sc from '../src/Componenets/Panier/Sc.png';
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from './Redux/Cart/cartSlice'
+import TendensGtx from './Componenets/Category/TendensGtx';
 const TunisianSweets = () => {
 
   const dispatch = useDispatch();
@@ -33,6 +34,9 @@ const TunisianSweets = () => {
     dispatch(addToCart(item));
     setShowCartMessage(true); // Show the message next to the cart
     setTimeout(() => setShowCartMessage(false), 2000); // Hide the message after 2 seconds
+  };
+  const handleCommandeClick = () => {
+    window.scrollTo(0, document.body.scrollHeight); // Scroll to the bottom when the button is clicked
   };
   const [cartCount, setCartCount] = useState(0); // State to keep track of the cart count
   const [showCartMessage, setShowCartMessage] = useState(false); // State to control the message visibility
@@ -101,7 +105,7 @@ const TunisianSweets = () => {
           <br />
           <div className="title">
             <h1 className="header-title">Nos Gateaux</h1>
-            <div className="sweets-grid">
+            {/* <div className="sweets-grid">
               {Gateaux.map((item, index) => (
                 <div key={index} className="sweet-card">
                   <img src={item.image} alt={item.name} className="sweet-image" />
@@ -112,11 +116,12 @@ const TunisianSweets = () => {
                     className="buy-now"
                     onClick={() => handleAcheterClick(item)}
                     >
-                    Acheter
+                   Commander
                   </button>
                 </div>
               ))}
-            </div>
+            </div> */}
+            <TendensGtx/>
             <br />
             <button 
       className="buy-now" 

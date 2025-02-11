@@ -6,6 +6,9 @@ import "./About.css";
 import { useDispatch } from 'react-redux';  // Import useDispatch from redux
 import { createGateauxOrder } from '../../Redux/Order/GateauxOrder';
 import { useNavigate } from "react-router-dom";
+import g1 from '../Category/imgsT/g1.jpg'
+import g9 from '../Category/imgsT/g9.jpg'
+import g0 from '../Category/imgsT/g0.jpg'
 
 const About = () => {
   const dispatch = useDispatch();  // Initialize dispatch
@@ -25,9 +28,9 @@ const About = () => {
   const [successPopupVisible, setSuccessPopupVisible] = useState(false);
 
   const portfolioItems = [
-    { id: 1, title: "Artwork", category: "Branding", image: "https://mongraindesucre.com/wp-content/uploads/2024/01/1705364533_gateau-ballon-danniversaire-recette-facile-et-originale-1-1024x701.jpg" },
-    { id: 2, title: "Smart Band", category: "Illustration", image: "https://mongraindesucre.com/wp-content/uploads/2024/01/1705364533_gateau-ballon-danniversaire-recette-facile-et-originale-1-1024x701.jpg" },
-    { id: 3, title: "Clock", category: "Web", image: "https://mongraindesucre.com/wp-content/uploads/2024/01/1705364533_gateau-ballon-danniversaire-recette-facile-et-originale-1-1024x701.jpg" },
+    { id: 1, title: "Trend", category: "Branding", image: g1 },
+    { id: 2, title: "Cake", category: "Illustration", image: g9 },
+    { id: 3, title: "Cake", category: "Web", image: g0 },
   ];
 
   const handleInputChange = (e) => {
@@ -147,10 +150,11 @@ const About = () => {
       <section className="portfolio">
         <h2> DÉLICIEUX SWEETS TUNISIENS.</h2>
         <div className="portfolio-filters">
-          <button className="filter active">Tous</button>
+        <button className="filter active" onClick={() => handleNavigation("Gateaux")}>Gateaux</button>
+
+          <button className="filter ">Tous</button>
           <button className="filter" onClick={() => handleNavigation("Sweets")}>Sucré</button>
       <button className="filter" onClick={() => handleNavigation("Salé")}>Salé</button>
-      <button className="filter" onClick={() => handleNavigation("Gateaux")}>Gateaux</button>
    
         </div>
         <div className="portfolio-grid">
@@ -164,7 +168,8 @@ const About = () => {
             </div>
           ))}
         </div>
-        <button className="load-more">Voir Plus</button>
+        <button className="load-more"         onClick={() => navigate("/Gateaux")} // Navigate to home page
+        >Voir Plus</button>
       </section>
     </div>
   );

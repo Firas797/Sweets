@@ -37,6 +37,22 @@ body {
   .product-card:hover {
     transform: translateY(-5px);
   }
+  .image-containerr {
+    width: 100%; /* Adjust based on layout */
+    height: 500px; /* Set a fixed height */
+    justify-content: center;
+    align-items: center;
+    overflow:visible;
+    position: relative;
+  }
+  
+  .image-containerr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures uniform size */
+    border-radius: 10px; /* Optional for rounded corners */
+  }
+  
   
   .image-container {
     position: relative;

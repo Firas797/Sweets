@@ -4,6 +4,7 @@ import Admin from './Componenets/Admin/Admin';
 import GateauxOrders from './Componenets/Admin/GateauxOrders';
 import Category from './Componenets/Category/Category';
 import Gateaux from './Componenets/Gateaux/Gateaux';
+import Loading from './Componenets/Gateaux/Loading';
 import Panier from './Componenets/Panier/Panier';
 import Salé from './Componenets/Salé/Salé';
 import ScrollToTop from './Componenets/ScrollToTop/ScrollToTop';
@@ -26,6 +27,8 @@ function App() {
           <Route path="/Panier" element={<Panier />} />
           <Route path="/Admin" element={<Admin />} />
           <Route path="/GtxOrder" element={<GateauxOrders />} />
+          <Route path="/SC" element={<Loading />} />
+
 
         </Routes>
       </Router>

@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Gateaux.css'
 import Navbar from '../Navbar/Navbar'
 import Bodys from './Bodys'
 import { useSelector, useDispatch } from "react-redux";
 import { createGateauxOrder } from '../../Redux/Order/GateauxOrder';
+import { useNavigate } from 'react-router-dom';
 
 function Gateaux() {
 
   const dispatch = useDispatch();  // Initialize dispatch
   
+  const [buttonDisabled, setButtonDisabled] = useState(true);  // Button is initially disabled
+  const [formError, setFormError] = useState(""); // To store error message
+
+
    const [formData, setFormData] = useState({
       name: "",
       phone: "",
@@ -21,12 +26,38 @@ function Gateaux() {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
+  const navigate = useNavigate();
+  const [buttonText, setButtonText] = useState("Envoyer");
+
+  const handleClick = () => {
+    setButtonText("⏳"); // Change text to spinner when clicked
+    setTimeout(() => {
+      navigate('/SC'); // Redirect to /SC after 3 seconds
+    }, 3000);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      dispatch(createGateauxOrder(formData)); // Send formData directly as gateauxData
-  };
+    
+    if (Object.values(formData).some(field => field === "")) {
+      setFormError("Veuillez remplir tous les champs."); // Show error message when clicking submit
+      return;
+    }
   
+    setFormError(""); // Clear error when form is complete
+    dispatch(createGateauxOrder(formData)); // Dispatch action with form data
+    setButtonText("⏳"); // Change button text to a loading state
+  
+    setTimeout(() => {
+      navigate('/SC'); // Redirect after 3 seconds
+    }, 5000);
+  };
+  useEffect(() => {
+    // Check if all fields are filled
+    const isFormComplete = Object.values(formData).every(field => field !== "");
+    setButtonDisabled(!isFormComplete);
+    setFormError(isFormComplete ? "" : "Veuillez remplir tous les champs.");
+  }, [formData]); // Dependency on formData to track changes
 
 
   const handleCommandeClick = () => {
@@ -275,7 +306,7 @@ function Gateaux() {
           <div className="form_container">
             <div className="heading_container">
               <h1 className="header-title">
-              Commander Maintenant
+              Commander Gâteaux Maintenant
               </h1>
               <br/>
               <div className="contact_footer">
@@ -333,9 +364,13 @@ function Gateaux() {
       required
     />
   </div>
-  <div className="btn_box">
-    <button >Envoyer</button>
-  </div>
+  <button
+                        type="submit"
+                        disabled={buttonDisabled}
+                        style={{ backgroundColor: buttonDisabled ? "gray" : "#825a21" }}
+                      >
+                        {buttonText}
+                      </button>
 </form>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from '../../Redux/Cart/cartSlice';
 import Sc from '../Panier/Sc.png'
 import { useNavigate } from "react-router-dom";
+import bg from './SaléImages/9.jpg'
 function Salé() {
     const dispatch = useDispatch();
       const navigate = useNavigate(); // Define the navigate function
@@ -31,8 +32,8 @@ function Salé() {
     <div className="container mx-auto px-2 ">
       <div className="sm: sm:pt-88 py-20">
         <div className="bg-black bg-opacity-70 p-12 mb-5 text-center"   style={{
-          backgroundImage: `url(${BG1})`,
-          backgroundPosition: 'center', // Centers the image
+          backgroundImage: `url(${bg})`,
+          backgroundPosition: 'bottom', // Centers the image
         }}>
                 <div className="  p-6 inline-block rounded-md">
           <h1 className="tm-text-gold  bg-opacity-70 bg-black text-5xl tm-logo-font mb-5">Salé </h1>
