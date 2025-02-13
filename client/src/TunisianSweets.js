@@ -4,12 +4,12 @@ import BG from './backgroudHeader.webp';
 import LOGO from '../src/Componenets/Navbar/logo.png';
 import Makroudh from './Products Pictures/MAKROUDH.webp';
 import Baklawa from './Products Pictures/BAKLAWA.jpg';
-import KAAKWARKA from './Products Pictures/KAAKWARKA.jpg';
+import Sm from './Products Pictures/16.jpg';
 import YOYO from './Products Pictures/YOYO.jpg';
-import G1 from './Products Pictures/Gateaux/G1.jpeg';
-import G2 from './Products Pictures/Gateaux/G2.jpg';
+import G1 from './Products Pictures/Gateaux/G1.jpg';
+import G22 from './Products Pictures/Gateaux/G22.jpg';
 import G3 from './Products Pictures/Gateaux/G3.jpg';
-import G5 from './Products Pictures/Gateaux/G4.jpg';
+import G16 from './Products Pictures/Gateaux/G16.jpg';
 import './App.css';
 import Navbar from './Componenets/Navbar/Navbar';
 import Category from './Componenets/Category/Category';
@@ -43,16 +43,17 @@ const TunisianSweets = () => {
   const navigate = useNavigate(); // Define the navigate function
 
   const sweets = [
-    { name: 'Baklawa', description: ' Baklawa tunisienne.', price: '15 DT', image: Baklawa },
-    { name: 'Makroud', description: 'Semolina pastry filled with dates.', price: '10 DT', image: Makroudh },
-    { name: 'Kaak Warka', description: 'Almond-filled pastry flavored with rosewater.', price: '12 DT', image: KAAKWARKA },
-    { name: 'Yoyo', description: 'Deep-fried pastry with honey.', price: '8 DT', image: YOYO },
+    { name: 'Baklawa', description: ' بقلاوة فاكهة', price: '50 DT', image: Baklawa },
+    { name: 'Makroud', description: 'مقروض', price: '12 DT', image: Makroudh },
+    { name: 'Samesa Jiljlan', description: 'صمصمة جلجلان"', price: '25 DT', image: Sm},
+    { name: 'Yoyo', description: 'يويو', price: '14 DT', image: YOYO },
+
   ];
-  const Gateaux = [
-    { name: 'Chocolat', description: 'Gâteaux ganach chocolat', price: '15 DT', image: G1 },
-    { name: 'Russe', description: 'Gâteaux russe pistache', price: '10 DT', image: G2 },
-    { name: 'G3', description: 'Almond-filled pastry flavored with rosewater.', price: '12 DT', image: G3 },
-    { name: 'Anniversaire', description: 'Gâteaux anniversaire', price: '8 DT', image: G5 },
+  const Salé = [
+    { name: 'Zouza Salé', description: 'زوزا مالحة', price: '50 DT', image: G1 },
+    { name: 'Baklewa salé poulet', description:  "بقلاوة مالحة دجاج", price: '50 DT', image: G22 },
+    { name: 'Mini hamburger poulet', description: 'ميني هامبرغر دجاج.', price: '50 DT', image: G3 },
+    { name: 'Tartelette Salé', description:  "تارتلات مالحة", price: '50 DT', image: G16 },
   ];
 
   const handleBuyNow = () => {
@@ -95,6 +96,25 @@ const TunisianSweets = () => {
             ))}
           </div>
           <br />
+          <h1 className="header-title">Nos Salé</h1>
+
+          <div className="sweets-grid">
+            {Salé.map((item, index) => (
+              <div key={index} className="sweet-card">
+                <img src={item.image} alt={item.name} className="sweet-image" />
+                <h3 className="sweet-name">{item.name}</h3>
+                <p className="sweet-description">{item.description}</p>
+                <p className="sweet-name">{item.price}</p>
+                <button
+                  className="buy-now"
+                  onClick={() => handleAcheterClick(item)}
+                >
+                  Acheter
+                </button>
+              </div>
+            ))}
+          </div>
+          <br/>
 
           <button 
       className="buy-now" 
