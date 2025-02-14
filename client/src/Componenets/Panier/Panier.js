@@ -176,7 +176,7 @@ function Panier() {
               <div className="card-body p-4">
                 <h5 className="mb-0">Total commandes: <span className='green'>{cartTotalAmount} DT</span></h5>
                 <br/>
-                <h5 className="mb-0">Livraison: <span className='green'>8 DT</span></h5>
+                <h5 className="mb-0">Livraison: <span className='green'>7 DT</span></h5>
 
               </div>
             </div>
