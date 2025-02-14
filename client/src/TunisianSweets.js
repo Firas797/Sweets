@@ -93,7 +93,9 @@ const TunisianSweets = () => {
               </div>
             ))}
           </div>
-
+          <button className="buy-now" onClick={() => navigate('/Sweets')}>
+            Voir Plus Sucré ...
+          </button>
           <br />
           <h1 className="header-title">Nos Salé</h1>
 
@@ -117,8 +119,8 @@ const TunisianSweets = () => {
           </div>
 
           <br />
-          <button className="buy-now" onClick={() => navigate('/Sweets')}>
-            Voir Plus ...
+          <button className="buy-now" onClick={() => navigate('/Salé')}>
+            Voir Plus Salé ...
           </button>
           <br />
 
