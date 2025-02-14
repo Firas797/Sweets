@@ -13,6 +13,7 @@ function Salé() {
       const navigate = useNavigate(); // Define the navigate function
     
     const [showCartMessage, setShowCartMessage] = useState(false); // State to control the message visibility
+    const [selectedImage, setSelectedImage] = useState(null); // State to control modal image
   
     const handleAcheterClick = (item) => {
       console.log("Item to add to cart:", item);
@@ -58,10 +59,11 @@ function Salé() {
     <div className="sweets-grid">
         {SaléJson.map((item, index) => (
           <div key={index} className="sweet-card">
-            <img
+             <img
                   src={item.image || 'img/antique-cafe-bg-02.jpg'}
                   alt={item.name}
                   className="sweet-image"
+                  onClick={() => setSelectedImage(item.image)} // Open modal
                 />
             <h3 className="sweet-name">{item.name}</h3>
             <p className="sweet-name">{item.name2}</p>
@@ -75,6 +77,15 @@ function Salé() {
           </div>
         ))}
       </div>
+      {selectedImage && (
+        <div className="image-modal" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content">
+            <span className="close-btn" onClick={() => setSelectedImage(null)}>×</span>
+            <img src={selectedImage} alt="Sweet Preview" className="modal-image" />
+          </div>
+        </div>
+      )}
+
     </div>        
   </div>
   {/* <div id="about" className="parallax-window" data-parallax="scroll" data-image-src="img/antique-cafe-bg-03.jpg">
