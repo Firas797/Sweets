@@ -67,7 +67,7 @@ function Salé() {
                 />
             <h3 className="sweet-name">{item.name}</h3>
             <p className="sweet-name">{item.name2}</p>
-            <p className="sweet-name">{item.price} dt</p>
+            <p className="sweet-name">{item.price}dt</p>
             <button
                   className="buy-now"
                   onClick={() => handleAcheterClick(item)}

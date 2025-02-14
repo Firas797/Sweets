@@ -32,6 +32,7 @@ function Panier() {
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
   };
+  
 
   const handleDecreaseCart = (product) => {
     dispatch(decreaseCart(product));
@@ -154,16 +155,16 @@ function Panier() {
                             {console.log('Item:', item, 'Price:', item.price, 'Quantity:', item.cartQuantity)}
 
                             {(() => {
-      const rawPrice = item.price?.replace(' DT', '').trim(); // Remove " DT"
-      const price = parseFloat(rawPrice); // Convert to number
-      const quantity = Number(item.cartQuantity);
+  const rawPrice = item.price?.toString().replace(' DT', '').trim(); // Ensure it's a string before replacing
+  const price = parseFloat(rawPrice); // Convert to number
+  const quantity = Number(item.cartQuantity);
 
-      console.log('Parsed Price:', price, 'Parsed Quantity:', quantity);
+  console.log('Parsed Price:', price, 'Parsed Quantity:', quantity);
 
-      return (!isNaN(price) && !isNaN(quantity))
-        ? (price * quantity).toFixed(2) // Ensure a valid number with two decimals
-        : 0;
-    })()} DT{' '}                      <DeleteOutlineIcon onClick={() => handleRemoveFromCart(item)} />
+  return (!isNaN(price) && !isNaN(quantity))
+    ? (price * quantity).toFixed(2) // Ensure a valid number with two decimals
+    : 0;
+})()}            <DeleteOutlineIcon onClick={() => handleRemoveFromCart(item)} />
                         
                       </h5>
                     </div>
